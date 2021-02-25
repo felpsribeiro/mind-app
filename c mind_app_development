@@ -1,0 +1,14 @@
+                                   List of databases
+         Name         |  Owner   | Encoding | Collate |  Ctype  |   Access privileges   
+----------------------+----------+----------+---------+---------+-----------------------
+ auladb               | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ financas             | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ mind_app_development | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ mind_app_test        | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ postgres             | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ template0            | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+                      |          |          |         |         | postgres=CTc/postgres
+ template1            | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+                      |          |          |         |         | postgres=CTc/postgres
+(7 rows)
+
