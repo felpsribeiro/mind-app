@@ -1,8 +1,13 @@
 class ContentsController < ApplicationController
     before_action :authenticate_user!
+    before_action :set_content, only: [:show, :edit, :update, :destroy]
   
     def index
         @contents = current_user.contents
+    end
+
+    def show
+
     end
 
     def new
@@ -17,6 +22,26 @@ class ContentsController < ApplicationController
         else
             render :new
         end
+    end
+
+    def edit; end
+
+    def update
+        if @content.update(content_params)
+            redirect_to contents_path, notice: 'Content successfully updated'
+        else
+            render :edit
+        end
+    end
+
+    def destroy
+        @content.destroy
+
+        redirect_to contents_path, notice: 'Content successfully destroyed'
+    end
+
+    def set_content
+        @content = Content.find(params[:id])
     end
 
     private

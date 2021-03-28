@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'home', to: 'home#index'
   
   get 'contents', to: 'contents#index'
-  resource :contents
+  resources :contents
 end

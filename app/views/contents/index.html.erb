@@ -1,9 +1,12 @@
- <%= link_to 'New Content', new_contents_path %>
+ <%= link_to 'New Content', new_content_path %>
 
 <h1>Contents</h1>
 
 <% @contents.each do |content| %>
-    Title: <%= content.title %>
-    ; Description: <%= content.description %>
+    <b>Title:</b> <%= content.title %>;
+    <b>Description:</b> <%= content.description %>;
+    <%= link_to 'Show', content_path(content) %> 
+    <%= link_to 'Edit', edit_content_path(content) %> 
+    <%= link_to 'Destroy', content_path(content), method: :delete, data: {confirm: 'Are you sure?'} %> 
     <br>
 <% end %>
